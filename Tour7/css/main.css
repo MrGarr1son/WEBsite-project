@@ -1,0 +1,349 @@
+* {
+    margin: 0;/* сбрасываем настройки и отступы */
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Ubuntu-c;
+    list-style: none;
+    text-decoration: none;
+}
+@font-face {
+    font-family: Ubuntu-c;
+    src: url(../assets/fonts/futuralight-light.woff2);
+}
+@font-face {
+    font-family: Ubuntu-c;
+    src: url(../assets/fonts/futuralight-light.woff2);
+}
+h1, h2, h3, h4, h5, h6 { /* параметры всех заголовков одинаковы */
+    font-family: Ubuntu-c;
+}
+/* will-change чтобы при анимации сайт не лагал */
+.container,.controls, .gallery > * {
+    will-change: transform;
+}
+body {
+    font-family: raleway-c;
+    overflow-x: hidden; /*убрать горизонтальную прокрутку  */
+    overflow-y: hidden;
+}
+.intro {
+    position:sticky;
+    top: 0;
+    max-height: 100vh;
+    overflow:hidden;
+}
+.video {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 56.25%;
+}
+.video__media {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.menu {
+    position: fixed;
+    height: 114px;
+    width: 100%;
+    background-color: rgb(0, 0, 0, .5);
+    font-size: 50px;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 6%;
+}
+header nav ul li {
+    position: relative;
+    float: left;
+}
+header nav ul li a {
+    padding: 30px;
+    color: white;
+    font-size: 55px;
+    display: block;
+}
+.main_page {
+    position: sticky;
+    font-size: 65px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    color: rgb(255, 255, 255);
+    transition: .5s;  
+    margin-left: 120px;
+}
+.main_page:hover {
+    transform: scale(1.2,1.2);
+}
+.tours {
+    position: sticky;
+    font-size: 65px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    color: rgb(255, 255, 255);
+    transition: .5s;
+    margin-left: 326px;   
+}
+.tours:hover {
+    transform: scale(1.2,1.2);
+}
+.about_company {
+    position: sticky;
+    font-size: 65px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    color: rgb(255, 255, 255);
+    transition: .5s;
+    margin-left: 360px;
+    left: 100px;    
+}
+.about_company:hover {
+    transform: scale(1.2,1.2);
+}
+.bg {    
+    padding-top: 400px;
+    padding-left: 300px;
+    position: fixed;
+    width: 2120px;
+    height: 1140px;
+    right: 30px; 
+    bottom: 6%;        
+}
+.dark {
+    position:fixed ;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0, .5) ;
+    backdrop-filter: blur(10px);
+}
+.container {
+    position: fixed;
+    width: 1655px;
+    height: 750px;
+    left: 110px;
+    top: 120px;
+    padding: 45px;
+    z-index: 1;
+    margin: 30px 15px;
+    background-color: white;
+    background-size: 600px;
+    box-shadow: 0px 0px 17px -7px rgba(0, 0, 0, 0.8);
+}
+section.gallery {
+    bottom: 60px;
+    width: 760px;
+    height: 680px;
+    position: absolute;
+    padding: 45px 0;
+    left: 150px;
+    box-shadow: 0px 0px 17px -7px rgba(0, 0, 0, 0.8);
+}
+  h2.title {
+    font-size: 43px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 25px;
+    position: relative;
+    left: 165px;
+}
+  h2.title:after {
+    content: "";
+    position: absolute;
+    width: 278px;
+    height: 3px;
+    background-color: #111111;
+    bottom: 20px;
+    left: 130px;
+    transform: translateX(-50%);
+}
+  .gallery-list {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    font-size: 0;
+    margin-top: 30px;
+    width: 680px;
+    height: 600px;
+    left: 40px;
+    bottom: 5px;
+}
+  .gallery-item {
+    display: block;
+    flex: 25%;
+    overflow: hidden;
+    position: relative;
+}
+  .gallery-item-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity .5s ease;
+    z-index: 2;
+}
+  .gallery-item:hover .gallery-item-hover {
+    opacity: 1;
+}
+  .gallery-item:hover img {
+    transform: scale(1.3) rotate(5deg);
+}
+  .gallery-item img {
+    max-width: 100%;
+    height: auto;
+    transition: all .5s ease;
+}
+  @media (max-width: 991px) {
+    .gallery-item{
+      flex: 33.3%;
+    }
+}
+  @media (max-width: 768px) {
+    .gallery-item{
+      flex: 50%;
+    }
+}
+  @media (max-width: 530px) {
+    .gallery-item{
+      flex: 100%;
+    }
+}
+.text {
+    position: fixed;
+    width: 800px;
+    height: 680px;
+    top: 6px;
+    left: 810px;    
+    padding: 45px;
+    z-index: 1;
+    margin: 30px 15px;
+    background-color: white;
+    background-size: 600px;
+    box-shadow: 0px 0px 17px -7px rgba(34, 60, 80, 0.7);
+}
+.img1 {
+    width: 600px;
+    height: 600px;
+}
+.imgs {
+    width:  75px;
+    height: 75px;
+}
+.titlediv {
+    bottom: 600px;
+    position: absolute;
+    left: 92px;
+}
+.hotelstar {
+    display: inline-block;
+    position: sticky;
+    left: 400px;
+    width: 200px;
+    height: 50px;
+}
+.paragraph {
+    font-size: 30px;
+}
+.paragraph1 {
+    font-size: 30px;
+    padding-bottom: 100px;
+}
+.infotour {
+    font-size: 40px;
+}
+.price1 {
+    display: inline;
+    margin-top: 30px;
+    font-size: 30px;
+}
+.price2 {
+    display: inline-block;
+    margin-left: 40px;
+    margin-top: 30px;
+    font-size: 30px;
+}
+.pr1 {
+    position: sticky;
+    display: inline-block;
+    width: 320px;
+    height: 80px;
+    margin-left: 8px;
+    margin-top: 8px;
+}
+.pr2 {
+    position: sticky;
+    display: inline;
+    width: 320px;
+    height: 80px;
+    margin-left: 42px;
+    margin-top: 8px;
+}
+.button {
+    display: inline-block;
+    padding: 10px 25px;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    background-color: rgb(255, 228, 0);
+    cursor: pointer;
+    color: black;
+    font-weight: 500;
+    font-size: 45px;
+    letter-spacing: 2px;
+    margin-left: 150px;
+}
+.popup-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+}
+.popup {
+    position: absolute;
+    background: #ffffff;
+    width: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    padding-top: 60px;
+}
+.popup form {
+    display: flex;
+    flex-direction: column;
+}
+.popup form input {
+    margin-bottom: 30px;
+    height: 50px;
+    font-size: 20px;
+    border: 2px solid #000000;
+}
+.popup form input[type="submit"] {
+    background: #000000;
+    color: #ffffff;
+    font-size: 24px;
+}
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.no-scroll {
+    overflow-y: hidden;
+}
