@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunshine</title>
+    <link rel="icon" type="images/x-icon" href="assets/img/favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/app.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+</head>
+<body>
+    <div class="intro">
+        <div class="video">
+            <video class="video__media" src="assets/video/video.mp4" autoplay muted loop></video> 
+            <div class="dark" ></div>
+            <div class="container">
+              <div class="text">
+                <img class="hotelstar" src="assets/img/star3.jpg" alt="">
+                <a href="#" class="button open-popup">Оставить заявку</a>
+                <h2 class="infotour" >Информация о туре</h2>
+                <p class="paragraph1" >Современный отель рядом с Bikini beach на острове Маафуши. Комфортные номера, расслабляющая атмосфера и приветливый персонал.</p>
+                <p class="paragraph">Перелет входит в стоимость тура.</p>
+                <p class="price1" >Цена за одного отдыхающего:</p>
+                <p class="price2" >Цена за двоих отдыхающих:</p>
+                <img class="pr1" src="assets/img/price1.png" alt="">
+                <img class="pr2" src="assets/img/price2.png" alt="">
+              </div>
+            </div>  
+        </div>    
+    </div>
+    <header class="menu">
+        <nav>
+            <ul>
+                <li><a href="../HomePage/index.html" class="main_page">Главная</a></li>
+                <li><a href="../Page Tours/index.html" class="tours">Туры</a></li>
+                <li><a href="../About company/index.html" class="about_company">О компании</a></li>
+            </ul>
+        </nav>  
+    </header>  
+        <section class="gallery">
+          <div class="gallery-list">
+            <div class="img1">
+              <a href="assets/img/11.jpg" class="gallery-item">
+                <div class="gallery-item-hover">Посмотреть</div>
+                <img  src="assets/img/1.jpg" alt="alt">
+              </a>
+            </div>
+            <div class="imgs">
+              <a href="assets/img/aa.jpg" class="gallery-item">
+                <div class="gallery-item-hover">Посмотреть</div>
+                <img  src="assets/img/a.jpg" alt="alt">
+              </a>
+              <a href="assets/img/bb.jpg" class="gallery-item">
+                <div class="gallery-item-hover">Посмотреть</div>
+                <img src="assets/img/b.jpg" alt="alt">
+              </a>
+              <a href="assets/img/cc.jpg" class="gallery-item">
+                <div class="gallery-item-hover">Посмотреть</div>
+                <img src="assets/img/c.jpg" alt="alt">
+              </a>
+              <a href="assets/img/dd.jpg" class="gallery-item">
+                <div class="gallery-item-hover">Посмотреть</div>
+                <img src="assets/img/d.jpg" alt="alt">
+              </a>
+              <a href="assets/img/ee.jpg" class="gallery-item">
+                <div class="gallery-item-hover">Посмотреть</div>
+                <img src="assets/img/e.jpg" alt="alt">
+              </a>
+              <a href="assets/img/ff.jpg" class="gallery-item">
+                <div class="gallery-item-hover">Посмотреть</div>
+                <img src="assets/img/f.jpg" alt="alt">
+              </a>
+              <a href="assets/img/gg.jpg" class="gallery-item">
+                <div class="gallery-item-hover">Посмотреть</div>
+                <img src="assets/img/g.jpg" alt="alt">
+              </a>
+              <a href="assets/img/jj.jpg" class="gallery-item">
+                <div class="gallery-item-hover">Посмотреть</div>
+                <img src="assets/img/j.jpg" alt="alt">
+              </a>
+            </div>
+          </div>
+          <div class="titlediv" >
+            <h2 class="title">Arena Beach Maldives</h2>
+          </div>
+        </section>       
+          <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+          <script>
+            $(".gallery-list").magnificPopup({
+              delegate: "a",
+              type: "image",
+              gallery: {
+                enabled: true
+              }
+            });
+          </script>
+          <div class="popup-bg" >
+            <div class="popup">
+              <img class="close-popup" src="assets/img/close.png" alt="icon">
+              <form action="send.php" method="post">
+                <input type="text" name="text" placeholder="Введите ваше ФИО" required />
+                <input type="tel" name="tel" placeholder="Введите ваш номер телефона" required />
+                <input type="submit" value="Отправить данные" />
+            </form>
+            </div>
+          </div>
+  <script src="jquery.min.js" ></script>
+</body>
+</html>
