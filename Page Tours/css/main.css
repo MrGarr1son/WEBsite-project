@@ -1,0 +1,208 @@
+* {
+    margin: 0;/* сбрасываем настройки и отступы */
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Ubuntu-c;
+    list-style: none;
+    text-decoration: none;
+}
+@font-face {
+    font-family: Ubuntu-c;
+    src: url(../assets/fonts/futuralight-light.woff2);
+}
+@font-face {
+    font-family: Ubuntu-c;
+    src: url(../assets/fonts/futuralight-light.woff2);
+}
+h1, h2, h3, h4, h5, h6 { /* параметры всех заголовков одинаковы */
+    font-family: Ubuntu-c;
+}
+/* will-change чтобы при анимации сайт не лагал */
+.container,.controls, .gallery > * {
+    will-change: transform;
+}
+body {
+    font-family: raleway-c;
+    overflow-x: hidden; /*убрать горизонтальную прокрутку  */
+    overflow-y: hidden;
+}
+.intro {
+    position:sticky;
+    top: 0;
+    max-height: 100vh;
+    overflow:hidden;
+}
+.video {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 56.25%;
+}
+.video__media {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.menu   {
+    position: fixed;
+    height: 114px;
+    width: 100%;
+    background-color: rgb(0, 0, 0, .5);
+    font-size: 50px;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 6%;
+}
+header nav ul li {
+    position: relative;
+    float: left;
+}
+header nav ul li a {
+    padding: 30px;
+    color: white;
+    font-size: 55px;
+    display: block;
+}
+.main_page {
+    position: sticky;
+    font-size: 65px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    color: rgb(255, 255, 255);
+    transition: .5s;  
+    margin-left: 120px;
+}
+.main_page:hover {
+    transform: scale(1.2,1.2);
+}
+.tours {
+    position: sticky;
+    font-size: 65px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    color: rgb(255, 255, 255);
+    transition: .5s;
+    margin-left: 326px;   
+}
+.tours:hover {
+    transform: scale(1.2,1.2);
+}
+.about_company {
+    position: sticky;
+    font-size: 65px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    color: rgb(255, 255, 255);
+    transition: .5s;
+    margin-left: 360px;
+    left: 100px;       
+}
+.about_company:hover {
+    transform: scale(1.2,1.2);
+}
+.content {
+    background: none;
+}
+.bg {
+    padding-top: 400px;
+    padding-left: 300px;       
+}
+.bg {
+    position: fixed;
+    width: 2120px;
+    height: 1140px;
+    right: 30px; 
+    bottom: 6%; 
+}
+.dark {
+    position:fixed ;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0, .5) ;
+    backdrop-filter: blur(10px);
+}
+.container {
+    height:700px;
+    width: 2000px;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    overflow: hidden;    
+}
+.container .gallery {
+    width: 100%;
+    display: flex;
+    grid-template-columns: auto auto auto;
+    grid-gap: 40px;
+    padding: 20px;
+    flex: none;
+}
+.container .gallery img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 8px 0px 4px rgba(0, 0, 0, 0.8);   
+}
+.container::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+}
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10% auto;
+}
+.controls #rightBtn {
+    width: 70px;
+    cursor: pointer;
+    margin: 30px;
+}
+.controls #leftBtn {
+    width: 70px;
+    cursor: pointer;
+    margin: 30px;
+}
+.slide {
+    position: relative;
+    bottom: 960px;
+}
+.details {
+    width: 100%;
+    height: 100%;
+    font-size: 75px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: rgb(255, 255, 255, 0.0);
+    position: absolute;
+    left: 100px;
+    top: 110%;
+    transition: 0.5s;   
+}
+.spanphoto { 
+    cursor: pointer;
+    overflow: hidden;
+}
+.spanphoto:hover .details {
+    top: 78%;
+    color: rgb(255, 255, 255,1);    
+}
+.target {
+    position:sticky ;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    bottom: 10%;
+}
+.target:hover {
+    background: rgb(0, 0, 0, .5);
+    backdrop-filter: blur(2px);
+}
+.details:hover .target {
+    background: rgb(0, 0, 0, .5);
+    backdrop-filter: blur(2px);
+}

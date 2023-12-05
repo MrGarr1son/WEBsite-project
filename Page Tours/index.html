@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunshine</title>
+    <link rel="icon" type="images/x-icon" href="assets/img/favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>       
+    <div class="intro">
+        <div class="video">
+            <video class="video__media" src="assets/video/video.mp4" autoplay muted loop></video> 
+            <div class="dark" ></div>   
+        </div>    
+    </div>
+    <header class="menu">
+        <nav>
+            <ul>
+                <li><a href="../HomePage/index.html" class="main_page">Главная</a></li>
+                <li><a href="index.html" class="tours">Туры</a></li>
+                <li><a href="../About company/index.html" class="about_company">О компании</a></li>
+            </ul>
+        </nav>  
+    </header>  
+    <div class="slide" >
+        <div class="controls">
+            <img src="assets/img/left.png" alt="left" id="leftBtn">
+            <div class="container">
+                <div class="gallery">
+                    <a href="../Tour1/index.html">
+                        <span class="spanphoto"><img class="preview" src="assets/img/1.jpg">
+                            <div class="target">
+                                <h1 class="details">Подробнее</h1>
+                            </div>
+                        </span>
+                    </a>
+                    <a href="../Tour2/index.html">
+                        <span class="spanphoto"><img class="preview" src="assets/img/2.jpg">
+                            <div class="target">
+                                <h1 class="details">Подробнее</h1>
+                            </div>
+                        </span>
+                    </a>
+                    <a href="../Tour3/index.html">
+                        <span class="spanphoto"><img class="preview" src="assets/img/3.jpg">
+                            <div class="target">
+                                <h1 class="details">Подробнее</h1>
+                            </div>
+                        </span>
+                    </a>
+                </div>
+                <div class="gallery">
+                    <a href="../Tour4/index.html">
+                        <span class="spanphoto"><img class="preview" src="assets/img/4.jpg">
+                            <div class="target">
+                                <h1 class="details">Подробнее</h1>
+                            </div>
+                        </span>
+                    </a>
+                    <a href="../Tour5/index.html">
+                        <span class="spanphoto"><img class="preview" src="assets/img/5.jpg">
+                            <div class="target">
+                                <h1 class="details">Подробнее</h1>
+                            </div>
+                        </span>
+                    </a>
+                    <a href="../Tour6/index.html">
+                        <span class="spanphoto"><img class="preview" src="assets/img/6.jpg">
+                            <div class="target">
+                                <h1 class="details">Подробнее</h1>
+                            </div>
+                        </span>
+                    </a>
+                </div>
+                <div class="gallery">
+                    <a href="../Tour7/index.html">
+                        <span class="spanphoto"><img class="preview" src="assets/img/7.jpg">
+                            <div class="target">
+                                <h1 class="details">Подробнее</h1>
+                            </div>
+                        </span>
+                    </a>
+                    <a href="../Tour8/index.html">
+                        <span class="spanphoto"><img class="preview" src="assets/img/8.jpg">
+                            <div class="target">
+                                <h1 class="details">Подробнее</h1>
+                            </div>
+                        </span>
+                    </a>
+                    <a href="../Tour9/index.html">
+                        <span class="spanphoto"><img class="preview" src="assets/img/9.jpg">
+                            <div class="target">
+                                <h1 class="details">Подробнее</h1>
+                            </div>
+                        </span>
+                    </a>
+                </div>          
+            </div>  
+            <img src="assets/img/right-arrow.png" alt="right" id="rightBtn">
+        </div>
+        <script>
+            let horizontScroll = document.querySelector('.container');
+            let leftBtn = document.getElementById('leftBtn');
+            let rightBtn = document.getElementById('rightBtn');
+            rightBtn.addEventListener('click', ()=>{
+                horizontScroll.style.scrollBehavior = "smooth";
+                horizontScroll.scrollLeft += 555;    
+            });
+            leftBtn.addEventListener('click', ()=>{
+                horizontScroll.style.scrollBehavior = "smooth";
+                horizontScroll.scrollLeft -= 555;    
+            });
+        </script>
+    </div> 
+</body>
+</html>
